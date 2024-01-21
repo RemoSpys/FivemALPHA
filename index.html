@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your FiveM Server</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <header class="flex items-center justify-between bg-red-600 p-4">
+        <div class="flex items-center space-x-4">
+            <img src="149004124fc3e0aaa2b9079562605941a663ede9.png" alt="Server Logo" class="h-12 w-12">
+            <span class="text-xl lg:text-2xl font-bold">Project ALPHA</span>
+        </div>
+
+        <nav class="hidden lg:flex space-x-4">
+            <a href="index.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Home</a>
+            <a href="rules2.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Shop</a>
+            <a href="maps.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Map</a>
+            <a href="#info"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Info</a>
+            <a href="rules.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Rules</a>
+            <a href="dashboard.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Dashboard</a>
+            <a href="discord.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Login</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="mobileMenuButton" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden fixed top-16 right-0 left-0 bg-red-600 text-white flex flex-col items-center space-y-4 p-4">
+            <a href="index.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Home</a>
+            <a href="r" class="hover:text-gray-300 transition duration-300 ease-in-out">Shop</a>
+            <a href="maps.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Map</a>
+            <a href="#info" class="hover:text-gray-300 transition duration-300 ease-in-out">Info</a>
+            <a href="rules.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Rules</a>
+            <a href="dashboard.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Dashboard</a>
+            <a href="discord.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Login</a>
+        </div>
+        
+    </header>
+
+    <section class="container mx-auto my-8 p-8 bg-gray-800 rounded-md shadow-lg">
+
+        <div class="flex mb-8">
+            <div class="flex-1">
+                <h1 class="text-4xl font-bold">Welcome to Project ALPHA FiveM Server</h1>
+                <p>Your description goes here.</p>
+            </div>
+            <div class="flex ml-8">
+                <img class="h-32 w-32" src="149004124fc3e0aaa2b9079562605941a663ede9.png" alt="Server Image"
+                    class="w-full h-auto rounded-md shadow-md">
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-center space-y-4 md:space-x-4 md:space-y-0">
+
+            <a href="changelog.html" class="mb-4">
+                <div class="collapsible-container bg-gray-900 p-4 rounded-md shadow-md" style="height: 150px;">
+                    <div class="flex items-center justify-center">
+                        <button class="bg-gray-900 p-4 rounded-md">
+                            <h2 class="text-xl font-bold mb-2 collapsible-content">Changelog</h2>
+                            <div class="collapsible-content">
+                                <p>Information about recently added features goes here.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </a>
+
+            <a href="updates.html">
+                <div class="collapsible-container bg-gray-900 p-4 rounded-md shadow-md" style="height: 150px;">
+                    <div class="flex items-center justify-center">
+                        <button class="bg-gray-900 p-4 rounded-md">
+                            <h2 class="text-xl font-bold mb-2 collapsible-content">Update Previews</h2>
+                            <div class="collapsible-content">
+                                <p>Development Peek</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </a>
+
+            <a href="changelog.html" class="mb-4">
+                <div class="collapsible-container bg-gray-900 p-4 rounded-md shadow-md" style="height: 150px;">
+                    <div class="flex items-center justify-center">
+                        <button class="bg-gray-900 p-4 rounded-md">
+                            <h2 class="text-xl font-bold mb-2 collapsible-content">New Things Added</h2>
+                            <div class="collapsible-content">
+                                <p>Information about recently added features goes here.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </a>
+
+            <a href="updates.html">
+                <div class="collapsible-container bg-gray-900 p-4 rounded-md shadow-md" style="height: 150px;">
+                    <div class="flex items-center justify-center">
+                        <button class="bg-gray-900 p-4 rounded-md">
+                            <h2 class="text-xl font-bold mb-2 collapsible-content">Sales</h2>
+                            <div class="collapsible-content">
+                                <p>Details about ongoing sales and promotions.</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all elements with the class "collapsible-content" and show them
+            var collapsibleContents = document.querySelectorAll(".collapsible-content");
+            collapsibleContents.forEach(function (content) {
+                content.style.display = "block";
+            });
+        });
+    </script>
+    <style>
+        .collapsible-container {
+            width: 300px;
+            /* Set a common width for both containers */
+        }
+    </style>
+</body>
+
+</html>

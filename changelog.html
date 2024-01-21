@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Project ALPHA</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+        h1 {
+            color: #e53e3e;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .changelog-entry {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #2d3748;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry-date {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .entry-content {
+            margin-top: 15px;
+            color: #cbd5e0;
+        }
+
+        .entry-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .entry-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .entry-content li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <header class="flex items-center justify-between bg-red-600 p-4">
+        <div class="flex items-center space-x-4">
+            <img src="149004124fc3e0aaa2b9079562605941a663ede9.png" alt="Server Logo" class="h-12 w-12">
+            <span class="text-xl lg:text-2xl font-bold">Project ALPHA</span>
+        </div>
+    
+        <nav class="hidden lg:flex space-x-4">
+            <a href="index.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Home</a>
+            <a href="rules2.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Shop</a>
+            <a href="maps.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Map</a>
+            <a href="#info" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Info</a>
+            <a href="rules.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Rules</a>
+            <a href="dashboard.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Dashboard</a>
+            <a href="discord.html" class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Login</a>
+        </nav>
+    
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="mobileMenuButton" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden lg:hidden fixed top-16 right-0 left-0 bg-red-600 text-white flex flex-col items-center space-y-4 p-4">
+            <a href="index.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Home</a>
+            <a href="r" class="hover:text-gray-300 transition duration-300 ease-in-out">Shop</a>
+            <a href="maps.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Map</a>
+            <a href="#info" class="hover:text-gray-300 transition duration-300 ease-in-out">Info</a>
+            <a href="rules.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Rules</a>
+            <a href="dashboard.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Dashboard</a>
+            <a href="discord.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Login</a>
+        </div>
+    </header>
+
+    <section class="container mx-auto my-8 p-8 bg-gray-800 rounded-md shadow-lg">
+
+        <h1 class="mb-4">Changelog</h1>
+
+        <div class="changelog-entry">
+            <div class="entry-date">16/01/2024 23:57</div>
+            <div class="entry-content">
+                <p>Dev Log - V1.8.4</p>
+                <ul>
+                    <li>[+] Added Gabz Triads Interior</li>
+                    <li>[+] Added Plane Airdrops (special loot wwill be added over time - Made by Juggy)</li>
+                    <li>[+] Added Weapon Bullet Effects (such as electricity, fireworks, and more) - Made by Juggy)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="changelog-entry">
+            <div class="entry-date">16/01/2024 21:49</div>
+            <div class="entry-content">
+                <p>Dev Log - V1.8.3c</p>
+                <ul>
+                    <li>[=] Updated Clothing (ALPHA Apex Set is now available, enjoy)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="changelog-entry">
+            <div class="entry-date">16/01/2024 21:40</div>
+            <div class="entry-content">
+                <p>Dev Log - V1.8.3b</p>
+                <ul>
+                    <li>[+] Added ALPHA Healthbars</li>
+                    <p class="mb-5"></p>
+                    <li>[=] Updated ALPHA Airstrikes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="changelog-entry">
+            <div class="entry-date">16/01/2024 19:29</div>
+            <div class="entry-content">
+                <p>Dev Log - V1.8.3</p>
+                <ul>
+                    <li>[+] Added New Vehicle Damage System</li>
+                    <li>[+] Added Wxndr Safezone Two (Custom Safezone Mapping by Me and LamontCranston) </li>
+                    <li>[+] Added New Cave Mine Interior (Regular GTA one that is normally locked, now has some lights and opened doors for easier mining)</li>
+                    <li>[+] Re-Added Official NoPixel Vegetation Pack</li>
+                    <p class="mb-5"></p>
+                    <li>[=] Fixed Collision issues with Wxndr Safezone Two</li>
+                    <li>[=] Fixed all of the non-collided blown up car props on the road</li>
+                    <li>[=] Fixed Vehicles smoking for absolutely no reason, never being able to be driven</li>
+                    <li>[=] Adjusted Default Zombie HP (400) to now (30)</li>
+                    <li>[=] Increased Zombie Pool Limit</li>
+                    <li>[=] Increased Max Dead Zombies</li>
+                    <li>[=] Increased Max Zombies in all Regions</li>
+                    <li>[=] Nerfed All Zombie HP (should be easier to survive now, much more balanced)</li>
+                    <li>[=] Various QOL improvements</li>
+                    <p class="mb-5"></p>
+                    <li>[-] Removed various resources</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all elements with the class "collapsible-content" and show them
+            var collapsibleContents = document.querySelectorAll(".collapsible-content");
+            collapsibleContents.forEach(function(content) {
+                content.style.display = "block";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

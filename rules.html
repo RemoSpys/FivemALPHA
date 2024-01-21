@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your FiveM Server Rules</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom CSS for the collapsible content */
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        @media (max-width: 640px) {
+            .collapsible-content {
+                max-height: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <header class="flex items-center justify-between bg-red-600 p-4">
+        <div class="flex items-center space-x-4">
+            <img src="149004124fc3e0aaa2b9079562605941a663ede9.png" alt="Server Logo" class="h-12 w-12">
+            <span class="text-xl lg:text-2xl font-bold">Project ALPHA</span>
+        </div>
+
+        <nav class="hidden lg:flex space-x-4">
+            <a href="index.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Home</a>
+            <a href="rules2.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Shop</a>
+            <a href="maps.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Map</a>
+            <a href="#info"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Info</a>
+            <a href="rules.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Rules</a>
+            <a href="dashboard.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Dashboard</a>
+            <a href="discord.html"
+                class="text-white hover:text-gray-300 transition duration-300 ease-in-out px-4 py-2 rounded-full bg-red-600 hover:bg-red-400">Login</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+            <button id="mobileMenuButton" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden fixed top-16 right-0 left-0 bg-red-600 text-white flex flex-col items-center space-y-4 p-4">
+            <a href="index.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Home</a>
+            <a href="r" class="hover:text-gray-300 transition duration-300 ease-in-out">Shop</a>
+            <a href="maps.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Map</a>
+            <a href="#info" class="hover:text-gray-300 transition duration-300 ease-in-out">Info</a>
+            <a href="rules.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Rules</a>
+            <a href="dashboard.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Dashboard</a>
+            <a href="discord.html" class="hover:text-gray-300 transition duration-300 ease-in-out">Login</a>
+        </div>
+    </header>
+
+    <section class="container mx-auto my-8 p-4 sm:p-8 bg-gray-800 rounded-md shadow-lg">
+
+        <div class="flex items-center mb-4 sm:mb-8 justify-center">
+            <button class="bg-gray-900 p-3 sm:p-4 rounded-md" onclick="toggleAll()">Open All Boxes</button>
+        </div>
+
+        <div class="flex flex-wrap justify-center space-y-4 md:space-x-4 md:space-y-0">
+
+            <!-- Rule 1 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('devPeek')">Base Building</h2>
+                <div id="devPeekContent" class="collapsible-content">
+                    <li class="mb-2">Players may not build inside or within 300m of Monuments, Trevor's Trailer, Drug Zones, Event Zones, Nightmare Zones, Military Bases, Dealerships.</li>
+                    <li class="mb-2">Building on roads = NO</li>
+                    <li class="mb-2">Players must build at least 200m apart; if deemed too close to another base, you will be warned once, followed by a removal of the base. (This rule applies to Friends, Allies, Friends of Clans / Clan Members)</li>
+                </div>
+            </div>
+
+            <!-- Rule 2 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('newThingsAdded')">VDM / Vehicle Deathmatch</h2>
+                <div id="newThingsAddedContent" class="collapsible-content">
+                    <li class="mb-2">Vehicle deathmatch is identical to random deathmatch, however, the rule explains how vehicles should not be used as weapons. Typically, all forms of VDM are not allowed.</li>
+                    <li class="mb-2">You are only allowed to kill someone if you, and the persons are inside of any of the CIRCLE RED ZONES</li>
+                    <li class="mb-2">If you are a victim of VDM, you MUST provide a clip during your report. (this is only if logs are unavailable for any reason)</li>
+                </div>
+            </div>
+
+            <!-- Rule 3 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('combat')">Combat Logging</h2>
+                <div id="combatContent" class="collapsible-content">
+                    <li class="mb-2">Players must not disconnect from a combat situation to avoid negative consequences such as loss of loot, money, or other valuables. If you crash, you must reconnect to the server and inform the other parties via Discord or In-Game Chat.</li>
+                    <li class="mb-2">Players caught combat logging will be warned, following harsher punishments such as a kick or ban if further instances of combat logging occur; this is not a rule to take lightly.</li>
+                </div>
+            </div>
+
+            <!-- Rule 4 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('clan')">Clan and Clan Territory Rules</h2>
+                <div id="clanContent" class="collapsible-content">
+                    <li class="mb-2">Players must not disconnect from a combat situation to avoid negative consequences such as loss of loot, money, or other valuables. If you crash, you must reconnect to the server and inform the other parties via Discord or In-Game Chat.</li>
+                    <li class="mb-2">Players caught combat logging will be warned, following harsher punishments such as a kick or ban if further instances of combat logging occur; this is not a rule to take lightly.</li>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-wrap justify-center space-y-4 md:space-x-4 md:space-y-0 p-8">
+
+            <!-- Rule 5 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('rdm')">RDM / Random Deathmatch</h2>
+                <div id="rdmContent" class="collapsible-content">
+                    <li class="mb-2">Vehicle deathmatch is identical to random deathmatch, however, the rule explains how vehicles should not be used as weapons. Typically, all forms of VDM are not allowed.</li>
+                    <li class="mb-2">You are only allowed to kill someone if you, and the persons are inside of any of the CIRCLE RED ZONES</li>
+                    <li class="mb-2">If you are a victim of VDM, you MUST provide a clip during your report. (this is only if logs are unavailable for any reason)</li>
+                </div>
+            </div>
+
+            <!-- Rule 6 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('KOS')">KOS / Kill on Sight</h2>
+                <div id="KOSContent" class="collapsible-content">
+                    <li class="mb-2">Kill on sight (KoS) is the act of killing a player with no engagement.</li>
+                    <li class="mb-2">Players are NOT allowed to KoS (Only deemed fit if there are Hackers, Players Mass RDMing).</li>
+                    <li class="mb-2">If you are a victim of KoS, you MUST provide a clip during your report. (this is only if logs are unavailable for any reason)</li>
+                    <li class="mb-2">Airdrops are considered KoS</li>
+                    <li class="mb-2">Airdrops must NOT be dropped onto your base or any player's base, safe zones, quest zones.</li>
+                    <li class="mb-2">Airdrops are allowed in Red Zones and ANYWHERE outside of Red Zones. They are KoS.</li>
+                </div>
+            </div>
+
+            <!-- Rule 7 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('CHEATING')">Cheating and Server Exploits</h2>
+                <div id="CHEATINGContent" class="collapsible-content">
+                    <li class="mb-2">Hackers will be permanently banned without warning or chance to appeal.</li>
+                    <li class="mb-2">Mods, trainers, and software that enable their user to activate unfair abilities are hacks, this is not debatable.</li>
+                    <li class="mb-2">Players must not have the ability to activate cheats on demand while in the server; players must uninstall such mods and trainers before joining the game or risk being automatically detected by our anti-cheat preventions.</li>
+                    <li class="mb-2">Players are allowed to use Audio and Visual mods if there are no side effects (These mods cannot improve or change vehicle performance or models or protect the player from gunfire).</li>
+                    <li class="mb-2">Players are allowed to bind keys to make it easier to perform actions (usually those that require typing).</li>
+                </div>
+            </div>
+
+            <!-- Rule 8 -->
+            <div class="bg-gray-900 p-4 rounded-md shadow-md w-full md:w-64">
+                <h2 class="text-xl font-bold mb-2 cursor-pointer text-center" onclick="toggleContent('ROBBERIES')">Robberies and Scamming</h2>
+                <div id="ROBBERIESContent" class="collapsible-content">
+                    <li class="mb-2">Players cannot force their victims to withdraw money from an ATM. Under no circumstances can a player force another player to sell or trade assets purchased with USD or via In-Game Credits such as cosmetics, property, houses, vehicles, businesses or other in-game assets. You are only allowed to take In-Game Inventory Items such as Weapons, Consumables, Armors, Masks, and General Loot</li>
+                    <li class="mb-2">Players are NOT allowed to take another player's valuables unless they've died in Red Zone marked on the map.</li>
+                    <li class="mb-2">Players are NOT allowed to take another player's vehicle. (Secured loot may be inside of someone's car, if you're caught stealing you will be punished accordingly)</li>
+                    <li class="mb-2">Players cannot scam during trades; all trades must be completed fairly and both sides must receive the items agreed on.</li>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // JavaScript functions to toggle content visibility
+            function toggleContent(id) {
+                var content = document.getElementById(id + 'Content');
+                // Toggle the 'hidden' class to show/hide content
+                content.classList.toggle('hidden');
+                // Set max-height to the scrollHeight if not hidden, 0 if hidden
+                content.style.maxHeight = content.classList.contains('hidden') ? '0' : content.scrollHeight + 'px';
+            }
+
+            function toggleAll() {
+                // Loop through each collapsible content and toggle them
+                var allContents = document.querySelectorAll('.collapsible-content');
+                allContents.forEach(function (content) {
+                    content.classList.toggle('hidden');
+                    content.style.maxHeight = content.classList.contains('hidden') ? '0' : content.scrollHeight + 'px';
+                });
+            }
+        </script>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with Discord</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="font-sans bg-gray-800 text-white">
+
+  <!-- Content -->
+  <div class="container mx-auto flex items-center justify-center h-screen bg-discord-gray">
+    <a id="login" href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&response_type=token&redirect_uri=http%3A%2F%2Fyour-domain.com%2Fauth/callback&scope=identify" class="bg-discord-blue text-xl px-5 py-3 rounded-md font-bold flex items-center space-x-4 hover:bg-gray-600 transition duration-75">
+      <i class="fab fa-discord text-2xl"></i>
+      <span>Login with Discord</span>
+    </a>
+  </div>
+</body>
+</html>

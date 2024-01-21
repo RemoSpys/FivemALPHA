@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Maps</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="font-sans bg-gray-800 text-white">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <ul class="flex space-x-4">
+        <li><a href="/">Home</a></li>
+        <li id="login-link"><a href="discord.html">Login</a></li>
+        <li id="user-info" style="display:none;"></li>
+        <li id="logout" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mx-auto flex items-center justify-center h-screen bg-discord-gray">
+    <h1 class="text-4xl font-bold">Welcome to Your Maps!</h1>
+  </div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    // Function to handle logout
+    function logout() {
+      // Perform logout actions, such as clearing user session
+      // You may want to redirect to the home page or do other cleanup tasks
+      document.getElementById("user-info").style.display = "none";
+      document.getElementById("login-link").style.display = "block";
+      document.getElementById("logout").style.display = "none";
+    }
+
+    // Function to handle displaying user info after successful login
+    function displayUserInfo(username, avatarUrl) {
+      document.getElementById("login-link").style.display = "none";
+      document.getElementById("user-info").innerHTML = `<img src="${avatarUrl}" alt="${username}'s Avatar" class="user-avatar rounded-full w-8 h-8 mr-2"> Welcome, ${username}!`;
+      document.getElementById("user-info").style.display = "block";
+      document.getElementById("logout").style.display = "block";
+    }
+
+    // Check if the user is already authenticated (e.g., from a redirect)
+    const accessToken = new URLSearchParams(window.location.hash.substr(1)).get("access_token");
+
+    if (accessToken) {
+      // You would typically send this token to your server for validation
+      // and to retrieve user information, but for simplicity, we'll just display dummy data here
+      const dummyUsername = "JohnDoe";
+      const dummyAvatarUrl = "https://example.com/avatar.jpg";
+
+      displayUserInfo(dummyUsername, dummyAvatarUrl);
+    }
+  </script>
+</body>
+</html>
